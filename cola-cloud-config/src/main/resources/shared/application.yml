@@ -21,22 +21,22 @@ security:
       scope: server
 spring:
   rabbitmq:
-    host: cola-rabbitmq
+    host: localhost
     port: 5672
-    username: ${RABBITMQ_SERVER_USERNAME}
-    password: ${RABBITMQ_SERVER_PASSWORD}
+    username: admin
+    password: 123
   sleuth:
     sampler:
       percentage: 1
   datasource:
-    url: jdbc:mysql://cola-mysql:3306/cola-cloud?autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull
-    username: ${MYSQL_SERVER_USERNAME}
-    password: ${MYSQL_SERVER_PASSWORD}
+    url: jdbc:mysql://localhost:3306/cola-cloud?autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull
+    username: root
+    password: Tj@19871101
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.jdbc.Driver
     db-name: cola-cloud
   redis:
-    host: cola-redis
+    host: localhost
     port: 6379
     username: ${REDIS_SERVER_USERNAME:}
     password: ${REDIS_SERVER_PASSWORD:}

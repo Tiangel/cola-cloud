@@ -3,15 +3,15 @@ eureka:
     prefer-ip-address: true
   client:
     serviceUrl:
-      defaultZone: http://${REGISTRY_SERVER_USERNAME}:${REGISTRY_SERVER_PASSWORD}@registry:8761/eureka/
+      defaultZone: http://admin:123@localhost:8761/eureka/
 spring:
   application:
     name: monitor
   cloud:
     config:
       fail-fast: true
-      username: ${CONFIG_SERVER_USERNAME}
-      password: ${CONFIG_SERVER_PASSWORD}
+      username: admin
+      password: 123
       discovery:
         enabled: true
         service-id: config
